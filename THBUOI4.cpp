@@ -25,8 +25,20 @@ void xuatMaTran(int x[100][100], int m, int n){
 		printf("\n");
 	}
 }
+int timMax(int x[100][100], int m, int n){
+	int max = x[0][0];
+	for(int i=0; i<m; i++){
+		for(int j=0; j<n; j++){
+			if(max<x[i][j]){
+				max = x[i][j];
+			}
+		}
+	}
+	return max;
+}
 int main(){
 	nhapMaTran(a, m, n);
 	xuatMaTran(a, m, n);
+	printf("Max = %d", timMax(a, m, n));
 }
 
